@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wight@100;200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #1b2029;
+    color: white;
+    font-weight: 400;
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+main {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*________________________________________________*/
+/* Estilo do titulo e redes sociais*/
+
+main h1 {
+    color: #8880fe;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+main .social-media {
+    display: flex;
+    align-content: center;
+}
+
+/* Tira o sublinhado*/
+main .social-media a {
+    text-decoration: none;
+}
+
+/* Ajuste o tamanho da imagem*/
+main .social-media img {
+    width: 16px;
+    margin-left: 3rem;
+}
+
+/* Retira a margem esqueda do google*/
+main .social-media a:first-child img {
+    margin-left: 0;
+}
+
+/*________________________________________________*/
+/* Estilo da linha de divisão*/
+
+/* Espçamento do OR em relação das figuras*/
+main .alternativa {
+    margin-top: 0.5rem;
+}
+
+/* Estlo da palavra OR*/
+main .alternativa span {
+    font-size: 0.8rem;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+/* Linha antes e depois da palvra OR*/
+
+main .alternativa span::before,main .alternativa span::after {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 100px;
+    bottom: 50%;
+    right: 50px;
+    background: rgba(255, 255, 255, 0.3); 
+}
+
+/* Alinhamento das linhas */
+main .alternativa span::after {
+    left: 50px;
+}
+
+/*________________________________________________*/
+/* Estilo do formulário*/
+
+/* Alinhamento das caixas de entrada Forms */
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Alinhamento dos textos das caixas de entrada Forms */
+main form label {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Letras do Form acima */
+main form label span {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+/* Estilo do Form interno*/
+main form input {
+    background: #161923;
+    width: 300px;
+    height: 25px;
+    padding: 0 0.5rem;
+    margin-top: 0.8rem;
+    outline: none;
+    color: rgba(166, 166, 166,);
+    font-size: 0.9rem;
+    border: 1px solid #040b12;
+    border-radius: 5px;
+}
+
+/* Estilo do botão Sign Up*/
+main form input[type="submit"] {
+    cursor: pointer;
+    width: 50%;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 32px;
+    background: #6c63ff;
+    color: white;
+    font-size: 0.8rem;
+    transition: all.3s ease-in-out;
+
+}
+
+main form input[type="submit"]:hover {
+    background: #5952d4;
+}
+
+/* Alinhamento das figuras na parte inferiore esquerda*/
+section .images {
+    width: 50vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 2rem;
+}
+
+section .images {
+    width: 100%;
+}
+
+/* Criação do circulo via CSS*/
+
+section .images .circle {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg , #e8cbc0, #636fa4);
+    clip-path: circle(40% at right 80%);
+    z-index: -1;
+}
+
+/*________________________________________________*/
+/* Responsividada de acordo com o tamanho*/
+
+/* Telas Grandes*/
+
+@media only screen and (max-width: 900px) and (max-width:1200px) {
+
+    section .images  {
+        width: 110%;
+    }
+
+    section .images .circle{
+       clip-path: circle(35% at right 80%);
+    }
+    
+}
+
+/* Telas Medias*/
+
+@media only screen and (max-width: 900px) {
+
+    section .images  {
+        display: none;
+        visibility: hidden;
+    }
+
+    main{
+        width: 100vw;
+    }
+    
+}
+
+/* Telas pequenas*/
+@media only screen and (max-width: 450px) {
+    main h1 {
+        font-size: 1rem;
+    }
+
+    main .alternativa span {
+        font-size: 0.8rem;
+    }
+
+    main form label span, main form input [type="submit"] {
+       font-size: 0.8rem;
+    }
+}
+    
